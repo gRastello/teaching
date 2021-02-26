@@ -65,6 +65,8 @@
 %\def\ssf#1{\textsf{\small #1}}
 \newcounter{ex}
 \newenvironment{exercise}{\clearpage\addtocounter{ex}{1}\textbf{Esercizio \theex.\quad}}{}
+\newcounter{sol}
+\newenvironment{solution}{\addtocounter{sol}{1}\textbf{Soluzione \theex.\quad}}{}
 \pagestyle{empty}
 \parindent0ex
 \parskip2ex
@@ -90,7 +92,8 @@
 %
 % INDICARE NOME E COGNOME DI TUTTI GLI AUTORI
 %
-\lhead{Nome/i Cognome/i\quad +\quad Nome/i Cognome/i}
+\lhead{Gabriele Rastello\quad +\quad Mattia Viscariello}
+
 %
 \begin{document}
 
@@ -101,28 +104,32 @@
   \item[b.] $\big\{\phi(a,M): a\in M\big\}$ contains at least two sets;
   \item[c.] $\big\{\phi(a,M): a\in M\big\}$ contains only sets that are pairwise disjoint.
   \end{itemize}
-  \end{exercise}
-  
-  \begin{exercise}
+\end{exercise}
+
+\begin{solution}
+  \begin{itemize}
+  \item[a.] \(\exists a\forall b (\psi(b)\to\phi(a, b))\);
+  \item[b.] \(\exists a, b, c (\psi(a, b) \oplus \psi(b, c))\);
+  \item[c.] \(\forall a, b, c (\psi(a, c) \land \psi(b, c) \to \perp)\).
+  \end{itemize}
+\end{solution}
+
+\begin{exercise}
   Let $M$ be a structure in a signature that contains a symbol $r$ for a binary relation.
-  Write a sentence $\phi$ such that 
-  \begin{itemize} 
+  Write a sentence $\phi$ such that
+  \begin{itemize}
   \item[a.] $M\models\phi$ if and only if there is an $A\subseteq M$ such that $r^M\ \subseteq\ A\times\neg A$.
   \end{itemize}
-  \end{exercise}
-  
+\end{exercise}
 
 \begin{exercise}
   Let $M\preceq N$ and let $\phi(x)\in L(M)$.
   Prove that $\phi(M)$ is finite if and only if $\phi(N)$ is finite and in this case $\phi(N)=\phi(M)$.
-  \end{exercise}
-  
-  \begin{exercise}
+\end{exercise}
+
+\begin{exercise}
   Let $M\preceq N$ and let $\phi(x,z)\in L$.
   Suppose there are finitely many sets of the form $\phi(a,N)$ for some $a\in N^{|x|}$.
   Prove that all these sets are definable over $M$.
-  \end{exercise}
-
+\end{exercise}
 \end{document}
-
-
