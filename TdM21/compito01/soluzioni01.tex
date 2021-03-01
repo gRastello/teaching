@@ -122,6 +122,19 @@
   \end{itemize}
 \end{exercise}
 
+\begin{solution}
+  Let \(\phi\) be the formula \(\forall a\forall b (arb \to\forall c (b\not r c))\).
+
+  If \(M\models\phi\) then set \(A = \big\{a\in M\colon \text{there is a \(b\in M\) such that \(ar^Mb\) }\big\}\).
+  Now if \((a, b)\in r^M\) then \(a\in A\) by definition of \(A\) and there is no \(c\in M\) such that \(b r^M c\) (because \(M\models\phi\)) so \(b\not\in A\).
+  This proves that \(r^M\subseteq A\times\neg A\).
+
+  Conversely suppose that \(r^M\subseteq A\times\neg A\) for some \(A\subseteq M\).
+  If \(a r^M b\) we immediately have \(b\in\neg A\).
+  Now for the sake of contradiction let there be \(c\in M\) such that \(b r^M c\); but this immediately implies \(b\in A\) that is absurd.
+  We are forced to conclude that \(M\models\phi\).
+\end{solution}
+
 \begin{exercise}
   Let $M\preceq N$ and let $\phi(x)\in L(M)$.
   Prove that $\phi(M)$ is finite if and only if $\phi(N)$ is finite and in this case $\phi(N)=\phi(M)$.
