@@ -149,7 +149,7 @@
   \[\exists x(x\neq m_1 \land\ldots\land x\neq m_k\land \phi(x)).\]
   But \(\psi\) is a \(L(M)\)-sentence and thus \(M\models\psi\).
   This is clearly impossible because there sould be an element \(m\in M\) such that \(M\models\phi(m)\) but \(m\not\in\phi(M) = \big\{m_1,\ldots,m_k\big\}\).
-  By contradiction we have \(\phi(N)\subseteq\phid(M)\).
+  By contradiction we have \(\phi(N)\subseteq\phi(M)\).
 
   We conclude that \(\phi(M)\) finite implies \(\phi(M) = \phi(N)\) and thus \(\phi(N)\) finite as well.
 \end{solution}
@@ -159,4 +159,20 @@
   Suppose there are finitely many sets of the form $\phi(a,N)$ for some $a\in N^{|x|}$.
   Prove that all these sets are definable over $M$.
 \end{exercise}
+
+\begin{solution}
+  We present a solution for the case \(|x| = 1\) that we believe should be adjustable to the case \(|x| > 1\).
+  We know that \(A = \big\{\phi(a, N)\colon a\in N\big\}\) is finite.
+  For the sake of the argument we define the following equivalence relation on the elements of \(N\)
+  \[a\sim b\quad\Leftrightarrow\quad \phi(a, N) = \phi(b, N).\]
+  One immediately has that if \(a\sim m\) for some \(m\in M\) then \(\phi(a, N)\) is definable over \(M\) (just consider the formula \(\phi(m, x)\in L(M)\)).
+  We will show that for all \(a\in N\) there is some \(m\in M\) such that \(a\sim m\) and thus that all sets in \(A\) are definable over \(M\).
+
+  Choose \(m_1,\ldots, m_k\) in \(M\) such that if \(m\in M\) then \(m\sim m_i\) for some \(1\leq i\leq k\); we can always chose a finite number of such elements since \(A\) finite implies that \(\sim\) has a finite number of equivalence classes.
+  Now assume that there is \(n\in N\) such that \(n\not\sim m_i\) for all \(1\leq i\leq k\).
+  This condition is equivalent to requiring that \(N\) satisfies the following \(L(M)\)-sentence
+  \[\psi \equiv \exists n\big[\exists a\big(\phi(n, a)\oplus\phi(m_1, a)\big)\land\ldots\land\exists a\big(\phi(n, a)\oplus\phi(m_k, a)\big)\big].\]
+  But now since \(M\preceq N\) we have \(M\models\psi\) which is absurd by the choice of \(m_1,\ldots,m_k\).
+  By contradiction we conclude that for all \(a\in N\) there is some \(m\in M\) such that \(a\sim m\) and thus \(\phi(a, N)\) is definable over \(M\).
+\end{solution}
 \end{document}
