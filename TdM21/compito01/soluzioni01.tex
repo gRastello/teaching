@@ -140,6 +140,20 @@
   Prove that $\phi(M)$ is finite if and only if $\phi(N)$ is finite and in this case $\phi(N)=\phi(M)$.
 \end{exercise}
 
+\begin{solution}
+  We recall that \(M\preceq N\) means that \(M\) is a \(L(M)\)-substructure of \(N\) such that  \(N\models\psi\) \textit{if and only if} \(M\models \psi\) for all sentences \(\psi\in L(M)\).
+  We thus trivially have \(\phi(M)\subseteq\phi(N)\) so \(\phi(N)\) finite implies \(\phi(M)\) finite.
+
+  Now suppose \(\phi(M) = \big\{m_1,\ldots, m_k\big\}\) and \(\phi(M)\subset\phi(N)\).
+  We thus have that \(N\models\psi\) where \(\psi\) is the formula
+  \[\exists x(x\neq m_1 \land\ldots\land x\neq m_k\land \phi(x)).\]
+  But \(\psi\) is a \(L(M)\)-sentence and thus \(M\models\psi\).
+  This is clearly impossible because there sould be an element \(m\in M\) such that \(M\models\phi(m)\) but \(m\not\in\phi(M) = \big\{m_1,\ldots,m_k\big\}\).
+  By contradiction we have \(\phi(N)\subseteq\phid(M)\).
+
+  We conclude that \(\phi(M)\) finite implies \(\phi(M) = \phi(N)\) and thus \(\phi(N)\) finite as well.
+\end{solution}
+
 \begin{exercise}
   Let $M\preceq N$ and let $\phi(x,z)\in L$.
   Suppose there are finitely many sets of the form $\phi(a,N)$ for some $a\in N^{|x|}$.
