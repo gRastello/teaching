@@ -123,7 +123,7 @@
 \end{exercise}
 
 \begin{solution}
-  Let \(\phi\) be the formula \(\forall a\forall b (arb \rightarrow\forall c (b\not r c))\).
+  Let \(\phi\) be the formula \(\forall x\forall y (xry \rightarrow\forall z \neg(yrz))\).
 
   If \(M\models\phi\) then set \(A = \big\{a\in M\colon \text{there is a \(b\in M\) such that \(ar^Mb\) }\big\}\).
   Now if \((a, b)\in r^M\) then \(a\in A\) by definition of \(A\) and there is no \(c\in M\) such that \(b r^M c\) (because \(M\models\phi\)) so \(b\not\in A\).
@@ -170,8 +170,8 @@
 
   Choose \(m_1,\ldots, m_k\) in \(M\) such that if \(m\in M\) then \(m\sim m_i\) for some \(1\leq i\leq k\); we can always chose a finite number of such elements since \(A\) finite implies that \(\sim\) has a finite number of equivalence classes.
   Now assume that there is \(n\in N\) such that \(n\not\sim m_i\) for all \(1\leq i\leq k\).
-  This condition is equivalent to requiring that \(N\) satisfies the following \(L(M)\)-sentence
-  \[\psi \equiv \exists n\big[\exists a\big(\phi(n, a)\oplus\phi(m_1, a)\big)\land\ldots\land\exists a\big(\phi(n, a)\oplus\phi(m_k, a)\big)\big].\]
+  This condition is equivalent to requiring that \(N\) satisfies the \(L(M)\)-sentence
+  \[\psi \equiv \exists x \bigwedge_{i=1}^k\neg(x\sim m_i).\footnote{We use \(x\sim y\) as an abbreviation for \(\forall z (\phi(x, z) \leftrightarrow \phi(y, z))\).}\]
   But now since \(M\preceq N\) we have \(M\models\psi\) which is absurd by the choice of \(m_1,\ldots,m_k\).
   By contradiction we conclude that for all \(a\in N\) there is some \(m\in M\) such that \(a\sim m\) and thus \(\phi(a, N)\) is definable over \(M\).
 \end{solution}
