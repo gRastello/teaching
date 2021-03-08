@@ -108,9 +108,9 @@
 
 \begin{solution}
   \begin{itemize}
-  \item[a.] \(\exists a\forall b (\psi(b)\to\phi(a, b))\);
+  \item[a.] \(\exists a\forall b (\psi(b)\rightarrow\phi(a, b))\);
   \item[b.] \(\exists a, b, c (\psi(a, b) \oplus \psi(b, c))\);
-  \item[c.] \(\forall a, b, c (\psi(a, c) \land \psi(b, c) \to \perp)\).
+  \item[c.] \(\forall a, b, c (\psi(a, c) \land \psi(b, c) \rightarrow \perp)\).
   \end{itemize}
 \end{solution}
 
@@ -123,7 +123,7 @@
 \end{exercise}
 
 \begin{solution}
-  Let \(\phi\) be the formula \(\forall a\forall b (arb \to\forall c (b\not r c))\).
+  Let \(\phi\) be the formula \(\forall a\forall b (arb \rightarrow\forall c (b\not r c))\).
 
   If \(M\models\phi\) then set \(A = \big\{a\in M\colon \text{there is a \(b\in M\) such that \(ar^Mb\) }\big\}\).
   Now if \((a, b)\in r^M\) then \(a\in A\) by definition of \(A\) and there is no \(c\in M\) such that \(b r^M c\) (because \(M\models\phi\)) so \(b\not\in A\).
