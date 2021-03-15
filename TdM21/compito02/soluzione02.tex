@@ -138,6 +138,19 @@
   Open and closed are understood w.r.t.\@ the usual tolopology on $\RR$.
 \end{exercise}
 
+\begin{solution}
+  We prove that \ssf{1a}\(\IFF\)\ssf{2a}.
+
+  Assume \(X\) open and let \(a\) be one of its points; then we know that there is some real \(r>0\) such that \(\RR\models\forall x \big(|a - x| < r \imp x \in X\big)\).
+  Since it is an elementary extension we have that this sentence is also true in \(\nsR\).
+  Now let \(b\in\nsR\) be such that \(b\approx a\); then \(|b - a|\) is an infinitesimal and as such \(|b - a| < r\) so \(b\in \ns X\).
+
+  Now fix \(a\in X\) and assume \ssf{2a}.
+  Note that if \(\delta>0\) is an infinitesimal then \(|a-x| < \delta\) implies \(a\approx x\) and thus \(x\in \ns X\).
+  Since non-zero infinitesimals exist (there are actually infinitely many) \(\nsR\models\exists\delta\big(\delta>0 \land \forall x\big(|a - x|\leq\delta \imp x\in\ns X\big)\big)\).
+  But now \(\RR\) is an elementary substructure of \(\nsR\) so \(\RR\models\exists\delta\big(\delta>0 \land \forall x\big(|a-x| < \delta \imp x\in X\big)\big)\).
+  Finally, since the choice of \(a\) is arbitrary, \(X\) is an open set.
+\end{solution}
 
 \begin{exercise}\kern-1ex\textbf{(Bonus question)}\kern1ex
   For which sets $X \subseteq \RR$ does the following hold?
